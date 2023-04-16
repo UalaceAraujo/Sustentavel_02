@@ -1,0 +1,154 @@
+
+body {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  height: 93vh;
+  flex-direction: column;
+  background-image: url("../img/ecology_cor2.png");
+}
+
+header { 
+ padding-top: 30px;
+  text-align: center;
+  height: 120px;
+  font-size: 26px;
+  font-weight: bold;
+  background-image: Url("../Img/fundo2.png");
+  background-repeat: repeat;
+}
+
+h2{
+  text-align: center;
+}
+
+main {
+  flex: auto;
+  padding-right: 160px;
+  padding-left: 160px;
+  font-family:  sans-serif; /*fonte do texto*/
+}
+
+
+footer {
+  color: #FFFFFF; /*cor da fonte*/
+  background-color: #333; /*cor do fundo do rodapé*/
+  display: flex; /*posiciona uma div ao lado da outra*/
+  justify-content: space-between; /*Espaço entre as Divs*/
+  align-items: center; /*alinhar no centro*/
+  height: 50px; /*derfinir a altura do rodapé*/ 
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*Efeito no Botão*/
+/*Classe principal -> glow-on-hover*/
+/******************************/
+
+/*Ocorre enquato o mouse esta em cima do botão (hover)*/
+.glow-on-hover {
+    font-size: 20px;
+    font-style: italic;
+    width: 180px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #333;
+    cursor: pointer;
+    position: relative;
+    z-index: 0; 
+    border-radius: 10px; /*botão arredondado*/
+}
+
+/* Ocorre quando o mouse já esta em cima do botão mas antes de executar o hover-before*/
+.glow-on-hover:hover:before {
+  opacity: 1;
+} 
+
+/*Ocorre antes de passar o mouse por cima (hover)*/
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite; /*brilhar com velocidade de 20 frames por seguntos, desenho*/
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px; /*botão arredondado*/
+}
+
+/*Ocorre após passar o mouse por cima (hover)*/
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333; /*Define a cor de fundo do botão*/
+  left: 0;
+  top: 0;
+  border-radius: 10px; /*botão arredondado*/
+}
+
+/*Ocorre ao clicar no botão*/
+.glow-on-hover:active {
+    color: #333; /*Define a cor de fundo do botão*/
+}
+
+/*Ocorre após clicar no botão*/
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/******************************/
+
+
+
+/*Icones das redes sociais*/
+/**************************/
+
+/*ícones da Fonte Awesome*/
+.fa {
+    padding: 6px; /*Espeço entre o ícone e a borda*/
+    font-size: 15px; /*Tamanho da fonte de dentro*/
+    width: 16px; /*Tamanho do Ícone*/
+    text-align: center; /*Centraliza o símbolo na figura*/
+    text-decoration: none; /*Remove o sublinhado da tag a (do link)*/
+    margin: 5px 2px; /*espaçamento entre os ícones*/
+    border-radius: 50%; /*deixa o ícone redondo*/
+  }
+  
+  .fa:hover {
+      opacity: 0.7; /*Ao passar o mouse em cima, o ícone perde a luminosidade em 30%*/
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">; <!--comunica aos navegadores, quais sçao os caractéres usados no site-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ajusta o tamanho da tela ao device -->
+  <Title>Projeto Sustentabilidade</Title> <!-- Titulo da página -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" /> <!-- Página de estilos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--link para 
+  o CDN da fonte awesome -->
+</head>
+
+<body>
+    
+    <header>
+      Sustentabilidade e Consciência Ambiental para todos<br>Palestras Informativas 
+      <div class="centraliza" style="background-image: Url(Img/fundo2.png);background-repeat: repeat;;padding-top: 10px;">
+        <!-- Cada botão é animado através da classe glow-on-hover e abre outra página do projeto através do evento onclick, que 
+        quando clicado abre a página especificada no href -->
+        <button class="glow-on-hover" type="button" onclick="window.location.href='index.html';">Quem Somos</button> 
+        <button class="glow-on-hover" type="button" onclick="window.location.href='project.html';">Nosso Projeto</button>
+        <button class="glow-on-hover" type="button" onclick="window.location.href='inscreva.html';">Inscreva-se</button>
+        <button class="glow-on-hover" type="button" >Entre em Contato</button>
+      </div>
+    </header>
+
+    <main style="background-image: Url(Img/fundo.png);"> <!--imagem do papel reciclado do fundo-->
+          <h2 >Entre em contato</h2> <!-- subtítulo -->
+          <form action="mailto:unip.araraquara" method="post" enctype="text/plain"><!--trocar o email pessoal depois-->
+            Seu nome <br/>
+            <input nome="nome" type="tex"> <br>
+            Seu e-mail: <br>
+            <input nome="email" type="email"> <br>
+            Sua Mensagem <br>
+            <textarea name="Mensagem"></textarea> <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+          </form> <!--adicionar email em contatos-->
+
+
+    </main>
+
+    <footer>
+      <div class="footer-div-left"><!-- Div do rodapé esquerdo (das redes sociais) -->
+        <span class="rede-social">Acesse nossas redes sociais:&nbsp;&nbsp;</span>
+        <a href="https://www.facebook.com/UNIPoficial" class="fa fa-facebook" target="_blank"></a>
+        <a href="https://www.youtube.com/@UNIPOficial" class="fa fa-youtube" target="_blank"></a>
+        <a href="https://www.instagram.com/unipararaquara/" class="fa fa-instagram" target="_blank"></a>
+      </div>
+      <div class="footer-div-right">&copy;2023 - Todos os direitos reservados</div><!-- Div do rodapé direito (do copyright
+      ) -->
+    </footer>
+
+</body>
+
+</html>
